@@ -1,0 +1,23 @@
+{
+  "response": [
+    {
+      "id": "d4b33d28-04dd-4733-a6de-8877ec26c196",
+      "tag": "campus",
+      "networkDeviceId": "e5f93514-3ae5-4109-8b52-b9fa876e1eae",
+      "attributeInfo": {}
+    },
+    {
+      "id": "d4b33d28-04dd-4733-a6de-8877ec26c196",
+      "tag": "campus",
+      "networkDeviceId": "da733ffb-e34b-4733-bd85-b615fb7e61f3",
+      "attributeInfo": {}
+    },
+    {
+      "id": "d4b33d28-04dd-4733-a6de-8877ec26c196",
+      "tag": "campus",
+      "networkDeviceId": "f8c3fc68-cd26-4576-bcec-51f9b578f71e",
+      "attributeInfo": {}
+    }
+  ],
+  "version": "0.0"
+}

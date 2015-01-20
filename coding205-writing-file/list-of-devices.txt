@@ -1,0 +1,3 @@
+id = da733ffb-e34b-4733-bd85-b615fb7e61f3 type = SWITCH
+id = f8c3fc68-cd26-4576-bcec-51f9b578f71e type = SWITCH
+id = 2504be29-7684-43ae-8417-a75ca618287c type = ROUTER

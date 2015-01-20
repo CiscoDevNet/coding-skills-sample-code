@@ -1,0 +1,5 @@
+The list of devices of type: ROUTER
+id = 2504be29-7684-43ae-8417-a75ca618287c type = ROUTER
+id = cceaf2fe-c3d9-4d37-bf14-fba071c27d6e type = ROUTER
+id = 13f8aa58-4637-43bf-8ea6-6ff30899c12d type = ROUTER
+id = a632c6e8-89bf-4949-8e4d-a249105f2c7c type = ROUTER
