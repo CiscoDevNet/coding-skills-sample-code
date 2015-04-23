@@ -2,13 +2,13 @@
 import os
 import unittest
 import json
-import apicem_1
+import apicEm1
 
 class Coding102TestCase(unittest.TestCase):
 
 	def setUp(self):
 
-		self.app = apicem_1
+		self.app = apicEm1
 
 	def tearDown(self):
 
