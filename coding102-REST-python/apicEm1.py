@@ -23,11 +23,14 @@
 
 import requests
 
-# put the ip address or dns of your apic-em controller in this url
-url = 'https://sandboxapic.cisco.com/api/v0/host/1/3'
+def hello():
+    # put the ip address or dns of your apic-em controller in this url
+    url = 'https://sandboxapic.cisco.com/api/v0/host/1/3'
 
-# this statement performs a GET on the specified url
-response = requests.get(url, verify=False)
+    # this statement performs a GET on the specified url
+    response = requests.get(url, verify=False)
 
-# print the json that is returned
-print(response.text)
+    # print the json that is returned
+    print(response.text)
+
+    return response
