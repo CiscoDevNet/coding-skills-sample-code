@@ -18,6 +18,7 @@ class Coding102TestCase(unittest.TestCase):
 
 		result = self.app.hello()
 		self.assertTrue(result is not None)
+		self.assertEquals(200, result.status_code)
 
 if __name__ == '__main__':
 	unittest.main()

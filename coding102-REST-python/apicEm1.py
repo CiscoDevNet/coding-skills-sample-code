@@ -30,7 +30,18 @@ def hello():
     # this statement performs a GET on the specified url
     response = requests.get(url, verify=False)
 
-    # print the json that is returned
-    print(response.text)
-
     return response
+
+# This is special python syntax that enables you to run this script
+# directly or use it as a module and test your code!
+# Read more about it here: http://stackoverflow.com/questions/419163/what-does-if-name-main-do
+if __name__ == '__main__':
+
+    # this statement calls the method hello() and
+    # stores it into result
+    result = hello()
+
+    # print the result as text.
+    # The responses library provides the .text convenience method to access
+    # the result body or text
+    print(result.text)
