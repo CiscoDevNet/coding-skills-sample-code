@@ -30,7 +30,7 @@ import json
 
 # All of our REST calls will use the url for the APIC EM Controller as the base URL
 # So lets define a variable for the controller IP or DNS so we don't have to keep typing it
-controller_url = "http://64.103.26.59:8081/"
+controller_url = "http://sandboxapic.cisco.com/"
 
 # Get Devices
 # This function allows you to view a list of all the devices in the network(routers and switches).
@@ -47,11 +47,11 @@ get_devices_json = get_devices_response.json()
 # set our parent as the top level response object
 parent =  get_devices_json["response"]
 
-print "\nDevices = "
+print ("Devices = ")
 
 # for each device returned, print the networkDeviceId
 for item in parent:
-         print item["networkDeviceId"]
+         print (item["id"])
       
 
 # Get Hosts
@@ -68,11 +68,11 @@ get_hosts_json = get_hosts_response.json()
 # set our parent as the top level response object
 hosts_parent =  get_hosts_json["response"]
 
-print "\nHosts= "
+print ("Hosts= ")
 
 # for each device returned, print the networkDeviceId
 for item in hosts_parent:
-         print item["hostIp"]
+         print (item["hostIp"])
          
 
 # Get Policies
@@ -89,17 +89,17 @@ get_policies_json = get_policies_response.json()
 # set our parent as the top level response object
 policies_parent =  get_policies_json["response"]
 
-print "\nPolicies= "
+print ("Policies= ")
 
 # for each device returned, print the networkDeviceId
 for item in policies_parent:
-         print item["policyId"]
+         print (item["id"])
          
          
 
 # Get Applications
 # This function allows you to view a list of all the applications in the network.
-get_apps_url = controller_url + 'api/v0/configured-application'
+get_apps_url = controller_url + 'api/v0/application'
 
 #Perform GET on get_hosts_url and load response into a json object
 get_apps_response = requests.get(get_apps_url)
@@ -111,8 +111,8 @@ get_apps_json = get_apps_response.json()
 # set our parent as the top level response object
 apps_parent =  get_apps_json["response"]
 
-print "\nApplications= "
+print ("Applications= ")
 
 # for each device returned, print the networkDeviceId
 for item in apps_parent:
-         print item["applicationName"]
+         print (item["name"])
