@@ -55,3 +55,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Jetbrains IDE files
+.idea
