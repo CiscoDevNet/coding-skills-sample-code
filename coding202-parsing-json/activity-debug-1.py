@@ -1,7 +1,7 @@
 from urllib.request import Request, urlopen
 import json
 
-uri = 'https://64.103.26.61/api/contextaware/v1/maps/info/DevNetCampus'
+uri = 'https://msesandbox.cisco.com/api/contextaware/v1/maps/info/DevNetCampus'
 
 def get_content(uri):
 	req = Request(uri)

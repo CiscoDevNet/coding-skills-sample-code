@@ -1,6 +1,6 @@
 from urllib.request import Request, urlopen
 import json
-req = Request('https://64.103.26.61/api/contextaware/v1/maps/info/DevNetCampus/DevNetBuilding/DevNetZone')
+req = Request('https://msesandbox.cisco.com/api/contextaware/v1/maps/info/DevNetCampus/DevNetBuilding/DevNetZone')
 req.add_header('Authorization', 'Basic bGVhcm5pbmc6bGVhcm5pbmc==')
 req.add_header('Accept', 'application/json')
 response = urlopen(req)
