@@ -20,8 +20,9 @@ buildings = jsonObject["Campus"]["Building"]
 for building in buildings:
 	building_names.append(building["name"])
 
-#print(building_names)
-for building_name in building_names:
-	building_uri = uri + "/" + building_name
-	print(building_uri)
-	#print(get_content(building_uri))
+print(building_names)
+
+#for building_name in building_names:
+#	building_uri = uri + "/" + building_name
+#	print(building_uri)
+#	print(get_content(building_uri))
