@@ -18,10 +18,7 @@ You will need to download and setup a few items before you can begin coding alon
 
 This download contains the following python examples:
 
-* apic-em-helloworld.py – “hello world” type example to show list of devices
-* learning-lab-basics.py – Retrieves device list and pretty prints JSON
-* learning-lab-basics-step2.py – Retrieves network device list and parses JSON to display networkDeviceId values
-* learning-lab-basics-step3.py – Retrieves and lists all devices, hosts, policies and configured applications
-* learning-lab-create-policy.py – Shows how to create a new policy using the POST Method
-
-
+* create-ticket.py – First REST call to create a service ticket which is later used for authentication and role management
+* get-network-hosts.py – First application to parse the service ticket response and show list of hosts by doing a pretty print of the JSON data
+* get-network-devices.py – Retrieves network device list and parses JSON to display networkDeviceId values
+* manage-users.py – Shows how to manage controller access by retrieving, adding and deleting users
