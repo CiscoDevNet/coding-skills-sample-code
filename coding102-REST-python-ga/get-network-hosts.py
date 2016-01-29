@@ -33,7 +33,7 @@ controller='sandboxapic.cisco.com:9443'
 url = "https://" + controller + "/api/v1/ticket"
 
 #the username and password to access the APIC-EM Controller
-payload = {"username":"admin","password":"1vtG@lw@y"}
+payload = {"username":"admin","password":"C!sc0123"}
 
 #Content type must be included in the header
 header = {"content-type": "application/json"}
@@ -48,7 +48,7 @@ r_json=response.json()
 ticket = r_json["response"]["serviceTicket"]
 
 # URL for Host REST API call to get list of exisitng hosts on the network.
-url = "https://" + controller + "/api/v1/host"
+url = "https://" + controller + "/api/v1/host?limit=1&offset=1"
 
 #Content type must be included in the header as well as the ticket
 header = {"content-type": "application/json", "X-Auth-Token":ticket}

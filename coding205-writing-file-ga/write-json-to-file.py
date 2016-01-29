@@ -34,7 +34,7 @@ import json
 controller_url = "https://sandboxapic.cisco.com:9443"
 
 #the username and password to access the APIC-EM Controller
-payload = {"username":"admin","password":"1vtG@lw@y"}
+payload = {"username":"admin","password":"C!sc0123"}
 
 ticket_url = controller_url + "/api/v1/ticket"
 
