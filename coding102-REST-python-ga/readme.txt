@@ -1,5 +1,12 @@
 Before you begin
 
+These code samples are intended to be used with the Cisco DevNet Learning Labs. The Learning Labs will
+walk you through the code step by step.
+
+You can find the learning labs here:
+https://learninglabs.cisco.com/lab/coding-101-rest-basics-ga/step/1
+https://learninglabs.cisco.com/lab/coding-102-rest-python-ga/step/1
+
 You will need to download and setup a few items before you can begin coding along with us.
 
     Download the Coding 101 sample code and slides
