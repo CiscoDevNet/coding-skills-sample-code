@@ -1,26 +1,29 @@
 from urllib.request import Request, urlopen
 import json
 
-uri = 'https://msesandbox.cisco.com/api/contextaware/v1/maps/info/DevNetCampus'
+uri_cmx = 'https://msesandbox.cisco.com/api/contextaware/v1/maps/info/DevNetCampus'
 
+
+# Let's wrap our common get functionality in a function definition
 def get_content(uri):
-	req = Request(uri)
-	req.add_header('Authorization', 'Basic bGVhcm5pbmc6bGVhcm5pbmc==')
-	req.add_header('Accept', 'application/json')
-	response = urlopen(req)
-	responseString = response.read().decode("utf-8")
-	response.close()
-	return responseString
+    req = Request(uri)
+    req.add_header('Authorization', 'Basic bGVhcm5pbmc6bGVhcm5pbmc==')
+    req.add_header('Accept', 'application/json')
+    response = urlopen(req)
+    response_string = response.read().decode("utf-8")
+    response.close()
+    return response_string
 
-jsonObject = json.loads(get_content(uri))
+json_object = json.loads(get_content(uri_cmx))
 
 building_names = []
 
-buildings = jsonObject["Campus"]["Building"]
+buildings = json_object["Campus"]["Building"]
 for building in buildings:
-	building_names.append(building["name"])
+    building_names.append(building["name"])
 
 print(building_names)
+print(type(building_names))
 
 #for building_name in building_names:
 #	building_uri = uri + "/" + building_name

@@ -5,13 +5,13 @@ req = Request('https://msesandbox.cisco.com/api/contextaware/v1/maps/info/DevNet
 req.add_header('Authorization', 'Basic bGVhcm5pbmc6bGVhcm5pbmc==')
 req.add_header('Accept', 'application/json')
 response = urlopen(req)
-responseString = response.read().decode("utf-8")
+response_string = response.read().decode("utf-8")
 
-jsonObject = json.loads(responseString)
+json_object = json.loads(response_string)
 
-print(jsonObject["Campus"]["Building"])
+print(json_object["Campus"]["Building"])
 
-#buildings = jsonObject["Campus"]["Building"]
+#buildings = json_object["Campus"]["Building"]
 #for building in buildings:
 #	print(building["name"])
 

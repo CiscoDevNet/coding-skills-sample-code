@@ -3,15 +3,15 @@ import json
 
 req = Request('http://jsonplaceholder.typicode.com/users')
 response = urlopen(req)
-responseString = response.read().decode("utf-8")
+response_string = response.read().decode("utf-8")
 
-jsonObject = json.loads(responseString)
+json_object = json.loads(response_string)
 
-print(jsonObject)
-#print(jsonObject[4])
-#print(jsonObject[4]["name"])
-#print(jsonObject[4]["address"]["geo"])
-#print(jsonObject[4]["address"]["geo"]["lat"])
-#print(jsonObject[4]["address"]["geo"]["lng"])
+print(json_object)
+#print(json_object[4])
+#print(json_object[4]["name"])
+#print(json_object[4]["address"]["geo"])
+#print(json_object[4]["address"]["geo"]["lat"])
+#print(json_object[4]["address"]["geo"]["lng"])
 
 response.close()
