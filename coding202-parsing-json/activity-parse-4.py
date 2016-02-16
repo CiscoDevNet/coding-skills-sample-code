@@ -26,6 +26,6 @@ print(building_names)
 print(type(building_names))
 
 #for building_name in building_names:
-#	building_uri = uri + "/" + building_name
+#	building_uri = uri_cmx + "/" + building_name
 #	print(building_uri)
 #	print(get_content(building_uri))
