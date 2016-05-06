@@ -17,11 +17,11 @@ jsonObject = json.loads(get_content(uri))
 building_names = []
 
 buildings = jsonObject["Campus"]["Building"]
-for building in buildings:
+for building in buildings:	
 	building_names.append(building["name"])
 
-#print(building_names)
-for building_name in building_names:
+print(building_names)
+for building_name in building_names:	
 	building_uri = uri + "/" + building_name
 	print(building_uri)
-	#print(get_content(building_uri))
+	print(get_content(building_uri))
