@@ -7,8 +7,11 @@ response = urlopen(req)
 responseString = response.read().decode("utf-8")
 #print(responseString)
 jsonObject = json.loads(responseString)
+print(jsonObject)
 print(json.dumps(jsonObject, sort_keys=True, indent=4))
 accessPoints = jsonObject['Floor']['AccessPoint']
 for ap in accessPoints:
   print('Access Point: ' + ap['name'] + '\t eth: ' + ap['ethMacAddress'] + '\t ip: ' + ap['ipAddress'])
+  
+  
 response.close()
