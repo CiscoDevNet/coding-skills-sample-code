@@ -31,7 +31,7 @@ import json
 requests.packages.urllib3.disable_warnings() 
 
 
-controller='sandboxapic.cisco.com:9443'
+controller='sandboxapic.cisco.com'
 
 #creates and returns a service ticket.
 def getTicket():
@@ -40,7 +40,7 @@ def getTicket():
 	url = "https://" + controller + "/api/v1/ticket"
 
 	#the username and password to access the APIC-EM Controller
-	payload = {"username":"admin","password":"C!sc0123"}
+	payload = {"username":"devnetuser","password":"Cisco123!"}
 
 	#Content type must be included in the header
 	header = {"content-type": "application/json"}

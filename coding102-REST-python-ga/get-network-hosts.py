@@ -27,13 +27,13 @@ import requests
 #import json library
 import json
 
-controller='sandboxapic.cisco.com:9443'
+controller='sandboxapic.cisco.com'
 
 # put the ip address or dns of your apic-em controller in this url
 url = "https://" + controller + "/api/v1/ticket"
 
 #the username and password to access the APIC-EM Controller
-payload = {"username":"admin","password":"C!sc0123"}
+payload = {"username":"devnetuser","password":"Cisco123!"}
 
 #Content type must be included in the header
 header = {"content-type": "application/json"}
@@ -44,6 +44,7 @@ response= requests.post(url,data=json.dumps(payload), headers=header, verify=Fal
 #convert response to json format
 r_json=response.json()
 
+print(r_json)
 #parse the json to get the service ticket
 ticket = r_json["response"]["serviceTicket"]
 

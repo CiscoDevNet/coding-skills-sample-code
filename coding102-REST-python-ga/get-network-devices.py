@@ -26,14 +26,14 @@ import requests
 #import json library
 import json
 
-controller='sandboxapic.cisco.com:9443'
+controller='sandboxapic.cisco.com'
 
 def getTicket():
 	# put the ip address or dns of your apic-em controller in this url
 	url = "https://" + controller + "/api/v1/ticket"
 
 	#the username and password to access the APIC-EM Controller
-	payload = {"username":"admin","password":"C!sc0123"}
+	payload = {"username":"devnetuser","password":"Cisco123!"}
 
 	#Content type must be included in the header
 	header = {"content-type": "application/json"}
@@ -72,7 +72,8 @@ def getNetworkDevices(ticket):
 	
 	#Iterate through network device data and print the id and series name of each device
 	for i in r_json["response"]:
-		print(i["id"] + "   " + i["series"])
+		print(i["id"] + "   " + '{:53}'.format(i["series"]) + "  " + i["reachabilityStatus"])
+		
 
 
 theTicket=getTicket()

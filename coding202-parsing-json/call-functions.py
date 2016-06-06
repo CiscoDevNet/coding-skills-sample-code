@@ -10,5 +10,5 @@ def brett(val):
     
     
     
-#my_function()
-#brett(5)
+my_function()
+brett(5)
