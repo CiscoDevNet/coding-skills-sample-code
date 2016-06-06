@@ -37,7 +37,7 @@ requests.packages.urllib3.disable_warnings()
 
 
 # All of our REST calls will use the url for the APIC EM Controller as the base URL
-controller_url = "https://sandboxapic.cisco.com:9443"
+controller_url = "https://sandboxapic.cisco.com"
 
 
 def getUserInput():
@@ -73,7 +73,7 @@ def getTicket():
 	url = controller_url + "/api/v1/ticket"
 
 	#the username and password to access the APIC-EM Controller
-	payload = {"username":"admin","password":"C!sc0123"}
+	payload = {"username":"devnetuser","password":"Cisco123!"}
 
 	#Content type must be included in the header
 	header = {"content-type": "application/json"}

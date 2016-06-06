@@ -1,3 +1,3 @@
-id = 0a15fd77-44ba-4858-b3b1-0df37c4328e0 type = Cisco 3500I Unified Access Point
-id = 93a73198-850b-4002-bbf3-a224befae61d type = Cisco Catalyst 3850-48U-E Switch
-id = e3a39ff2-4031-4305-9bf1-61771264eb5b type = Cisco Catalyst 6503 Switch
+id = 32505c73-437d-429d-9e25-9fb9c5a2db80 type = Cisco 3500I Unified Access Point
+id = 7f794dae-b5fc-4cc4-8140-c088d46c7d51 type = Cisco Catalyst 3850-48U-E Switch
+id = 4418bd65-ce35-454c-a862-6db074f99030 type = Cisco Catalyst 6503 Switch
