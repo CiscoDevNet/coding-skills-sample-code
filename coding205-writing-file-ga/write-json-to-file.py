@@ -31,10 +31,10 @@ import json
 
 # All of our REST calls will use the url for the APIC EM Controller as the base URL
 # So lets define a variable for the controller IP or DNS so we don't have to keep typing it
-controller_url = "https://sandboxapic.cisco.com:9443"
+controller_url = "https://sandboxapic.cisco.com"
 
 #the username and password to access the APIC-EM Controller
-payload = {"username":"admin","password":"C!sc0123"}
+payload = {"username":"devnetuser","password":"Cisco123!"}
 
 ticket_url = controller_url + "/api/v1/ticket"
 
