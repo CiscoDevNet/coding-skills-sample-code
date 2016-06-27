@@ -79,7 +79,7 @@ def getTopology(ticket):
 		if "platformId" in n:
 			print()
 			print()
-			print('{:30}'.format("Node") + '{:25}'.format("Family") + '{:20}'.format("label")+ "Management IP")
+			print('{:30}'.format("Node") + '{:25}'.format("Family") + '{:20}'.format("Label")+ "Management IP")
 			print('{:30}'.format(n["platformId"]) + '{:25}'.format(n["family"]) + '{:20}'.format(n["label"]) + n["ip"])		
 		found=0    #print header flag
 		printed=0  #formatting flag
@@ -88,13 +88,13 @@ def getTopology(ticket):
 				#check that the source device id for the interface matches the node id.  Means interface originated from this device. 
 				if i["source"] == n["id"]:
 					if found==0:
-						print('{:>20}'.format("Source Interface") + '{:>15}'.format("Status") + '{:>22}'.format("Target Interface") + '{:>18}'.format("Target"))
+						print('{:>20}'.format("Source Interface") + '{:>15}'.format("Target") +'{:>28}'.format("Target Interface") + '{:>15}'.format("Status") )
 						found=1
 						printed=1					
 					for n1 in r_json["response"]["nodes"]:
 						#find name of node to which this one connects
 						if i["target"] == n1["id"]:
-							print("    " + '{:<25}'.format(i["startPortName"]) + '{:<12}'.format(i["linkStatus"]) + '{:<28}'.format(i["endPortName"]) + '{:<15}'.format(n1["platformId"]))							
+							print("    " + '{:<25}'.format(i["startPortName"]) + '{:<18}'.format(n1["platformId"]) + '{:<25}'.format(i["endPortName"]) + '{:<9}'.format(i["linkStatus"]) )							
 							break;
 		found=0		
 		for i in r_json["response"]["links"]:
@@ -104,12 +104,12 @@ def getTopology(ticket):
 					if found==0:
 						if printed==1:
 							print()
-						print('{:>20}'.format("Source Interface") + '{:>15}'.format("Status") + '{:>22}'.format("Target Interface") + '{:>18}'.format("Source"))
+						print('{:>10}'.format("Source") + '{:>30}'.format("Source Interface") + '{:>25}'.format("Target Interface") + '{:>13}'.format("Status"))
 						found=1					
 					for n1 in r_json["response"]["nodes"]:
 						#find name of node to that connects to this one
 						if i["source"] == n1["id"]:							
-							print("    " + '{:<25}'.format(i["startPortName"]) + '{:<12}'.format(i["linkStatus"]) + '{:<28}'.format(i["endPortName"]) + '{:<15}'.format(n1["platformId"]))
+							print("    " + '{:<20}'.format(n1["platformId"]) + '{:<25}'.format(i["startPortName"]) + '{:<23}'.format(i["endPortName"]) + '{:<8}'.format(i["linkStatus"]))
 							break;
 
 theTicket=getTicket()
