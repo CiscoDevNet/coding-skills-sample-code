@@ -37,7 +37,8 @@ requests.packages.urllib3.disable_warnings()
 
 
 # All of our REST calls will use the url for the APIC EM Controller as the base URL
-controller_url = "https://sandboxapic.cisco.com"
+#controller_url = "https://sandboxapic.cisco.com"
+controller_url='https://devnetapi.cisco.com/sandbox/apic_em'
 
 
 def getUserInput():

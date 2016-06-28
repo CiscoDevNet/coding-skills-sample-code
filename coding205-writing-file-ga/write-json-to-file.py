@@ -31,7 +31,9 @@ import json
 
 # All of our REST calls will use the url for the APIC EM Controller as the base URL
 # So lets define a variable for the controller IP or DNS so we don't have to keep typing it
-controller_url = "https://sandboxapic.cisco.com"
+#controller_url = "https://sandboxapic.cisco.com"
+controller_url='https://devnetapi.cisco.com/sandbox/apic_em'
+
 
 #the username and password to access the APIC-EM Controller
 payload = {"username":"devnetuser","password":"Cisco123!"}

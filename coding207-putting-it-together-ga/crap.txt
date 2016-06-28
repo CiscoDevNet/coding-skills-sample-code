@@ -1,0 +1,6 @@
+The list of devices of type: switch
+id = 7f794dae-b5fc-4cc4-8140-c088d46c7d51 type = Cisco Catalyst 3850-48U-E Switch
+id = 4418bd65-ce35-454c-a862-6db074f99030 type = Cisco Catalyst 6503 Switch
+id = 9222791a-95cf-4ae3-b498-6ac72d0074f4 type = Cisco Catalyst 6503 Switch
+id = 0c3aa565-233a-4843-9f5e-8a70f77e1853 type = Cisco Catalyst 4507R plus E Switch
+id = 19a333ba-52ee-49eb-90c2-4dc9ab05b47f type = Cisco Catalyst 4507R plus E Switch
