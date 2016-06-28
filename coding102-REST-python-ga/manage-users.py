@@ -31,7 +31,9 @@ import json
 requests.packages.urllib3.disable_warnings() 
 
 
-controller='sandboxapic.cisco.com'
+#controller='sandboxapic.cisco.com'
+controller='devnetapi.cisco.com/sandbox/apic_em'
+
 
 #creates and returns a service ticket.
 def getTicket():

@@ -27,7 +27,9 @@ import requests
 #import json library
 import json
 
-controller='sandboxapic.cisco.com'
+#controller='sandboxapic.cisco.com'
+controller='devnetapi.cisco.com/sandbox/apic_em'
+
 
 # put the ip address or dns of your apic-em controller in this url
 url = "https://" + controller + "/api/v1/ticket"
