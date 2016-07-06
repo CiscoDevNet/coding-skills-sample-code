@@ -30,8 +30,8 @@ import json
 requests.packages.urllib3.disable_warnings()
 
 #controller='sandboxapic.cisco.com'
-#controller='devnetapi.cisco.com/sandbox/apic_em'
-controller='sandboxapic.cisco.com:8081'
+controller='devnetapi.cisco.com/sandbox/apic_em'
+#controller='sandboxapic.cisco.com'
 
 def getTicket():
 	# put the ip address or dns of your apic-em controller in this url

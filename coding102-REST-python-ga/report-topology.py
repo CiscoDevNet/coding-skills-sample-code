@@ -31,8 +31,8 @@ import json
 requests.packages.urllib3.disable_warnings()
 
 #controller='sandboxapic.cisco.com'
-#controller='devnetapi.cisco.com/sandbox/apic_em'
-controller='sandboxapic.cisco.com'
+controller='devnetapi.cisco.com/sandbox/apic_em'
+
 
 def getTicket():
 	# put the ip address or dns of your apic-em controller in this url
@@ -78,7 +78,7 @@ def getTopology(ticket):
 	#convert data to json format.
 	r_json=response.json()
 	
-	nodes=[]
+	net_nodes=[]
 	#Iterate through network device data and list the nodes, their interfaces, status and to what they connect	
 	for n in r_json["response"]["nodes"]:
 		if "platformId" in n:
@@ -86,7 +86,7 @@ def getTopology(ticket):
 			print()
 			print('{:30}'.format("Node") + '{:25}'.format("Family") + '{:20}'.format("Label")+ "Management IP")
 			print('{:30}'.format(n["platformId"]) + '{:25}'.format(n["family"]) + '{:20}'.format(n["label"]) + n["ip"])
-			nodes.append(n["label"])
+			net_nodes.append(n["label"])
 			
 		found=0    #print header flag		
 		for i in r_json["response"]["links"]:
@@ -102,7 +102,7 @@ def getTopology(ticket):
 							print("    " + '{:<25}'.format(i["startPortName"]) + '{:<18}'.format(n1["platformId"]) + '{:<25}'.format(i["endPortName"]) + '{:<9}'.format(i["linkStatus"]) )							
 							break
 		
-	return nodes
+	return net_nodes
 	
 	
 theTicket=getTicket()
