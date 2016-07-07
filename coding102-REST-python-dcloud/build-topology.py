@@ -29,16 +29,15 @@ import json
 # Disable warnings
 requests.packages.urllib3.disable_warnings()
 
-#controller='sandboxapic.cisco.com'
-controller='devnetapi.cisco.com/sandbox/apic_em'
+controller='198.18.129.100'
 
 
 def getTicket():
 	# put the ip address or dns of your apic-em controller in this url
 	url = "https://" + controller + "/api/v1/ticket"
 
-	#the username and password to access the APIC-EM Controller
-	payload = {"username":"devnetuser","password":"Cisco123!"}	
+	#the username and password to access the APIC-EM Controller	
+	payload = {"username":"admin","password":"C1sco12345"}
 
 	#Content type must be included in the header
 	header = {"content-type": "application/json"}

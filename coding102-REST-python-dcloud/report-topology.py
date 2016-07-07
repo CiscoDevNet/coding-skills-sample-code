@@ -1,4 +1,4 @@
-# Example of building topology via REST API calls from Python
+# Example of building and reporting topology via REST API calls from Python
 
 # * THIS SAMPLE APPLICATION AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
 # * OF ANY KIND BY CISCO, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED
@@ -19,6 +19,7 @@
 # * PROFITS, OR LOST DATA, OR ANY OTHER INDIRECT DAMAGES EVEN IF CISCO OR ITS
 # * SUPPLIERS HAVE BEEN INFORMED OF THE POSSIBILITY THEREOF.-->
 
+from spark import *
 
 # import requests library
 import requests
@@ -29,16 +30,15 @@ import json
 # Disable warnings
 requests.packages.urllib3.disable_warnings()
 
-#controller='sandboxapic.cisco.com'
-controller='devnetapi.cisco.com/sandbox/apic_em'
-
+controller='198.18.129.100'
 
 def getTicket():
 	# put the ip address or dns of your apic-em controller in this url
 	url = "https://" + controller + "/api/v1/ticket"
 
 	#the username and password to access the APIC-EM Controller
-	payload = {"username":"devnetuser","password":"Cisco123!"}	
+	#payload = {"username":"devnetuser","password":"Cisco123!"}
+	payload = {"username":"admin","password":"C1sco12345"}
 
 	#Content type must be included in the header
 	header = {"content-type": "application/json"}
@@ -76,44 +76,39 @@ def getTopology(ticket):
 	#convert data to json format.
 	r_json=response.json()
 	
+	net_nodes=[]
 	#Iterate through network device data and list the nodes, their interfaces, status and to what they connect	
 	for n in r_json["response"]["nodes"]:
 		if "platformId" in n:
 			print()
 			print()
 			print('{:30}'.format("Node") + '{:25}'.format("Family") + '{:20}'.format("Label")+ "Management IP")
-			print('{:30}'.format(n["platformId"]) + '{:25}'.format(n["family"]) + '{:20}'.format(n["label"]) + n["ip"])		
-		found=0    #print header flag
-		printed=0  #formatting flag
+			print('{:30}'.format(n["platformId"]) + '{:25}'.format(n["family"]) + '{:20}'.format(n["label"]) + n["ip"])
+			net_nodes.append(n["label"])
+			
+		found=0    #print header flag		
 		for i in r_json["response"]["links"]:
 			if "startPortName" in i:
 				#check that the source device id for the interface matches the node id.  Means interface originated from this device. 
 				if i["source"] == n["id"]:
 					if found==0:
 						print('{:>20}'.format("Source Interface") + '{:>15}'.format("Target") +'{:>28}'.format("Target Interface") + '{:>15}'.format("Status") )
-						found=1
-						printed=1					
+						found=1											
 					for n1 in r_json["response"]["nodes"]:
 						#find name of node to which this one connects
 						if i["target"] == n1["id"]:
 							print("    " + '{:<25}'.format(i["startPortName"]) + '{:<18}'.format(n1["platformId"]) + '{:<25}'.format(i["endPortName"]) + '{:<9}'.format(i["linkStatus"]) )							
-							break;
-		found=0		
+							break
 		
-		for i in r_json["response"]["links"]:
-			if "startPortName" in i:
-				#Find interfaces that link to this one which means this node is the target. 
-				if i["target"] == n["id"]:
-					if found==0:
-						if printed==1:
-							print()
-						print('{:>10}'.format("Source") + '{:>30}'.format("Source Interface") + '{:>25}'.format("Target Interface") + '{:>13}'.format("Status"))
-						found=1					
-					for n1 in r_json["response"]["nodes"]:
-						#find name of node to that connects to this one
-						if i["source"] == n1["id"]:							
-							print("    " + '{:<20}'.format(n1["platformId"]) + '{:<25}'.format(i["startPortName"]) + '{:<23}'.format(i["endPortName"]) + '{:<8}'.format(i["linkStatus"]))
-							break;
-		
+	return net_nodes
+	
+	
 theTicket=getTicket()
-getTopology(theTicket)
+theNodes=getTopology(theTicket)
+nodestr=""
+for node in theNodes:
+	nodestr=nodestr + node + " "
+setHeaders()
+room_id=createRoom("Brett's Room")
+addMembers(room_id)   # Passing roomId to members function here to Post Message.
+postMsg(room_id,"Network nodes are " + nodestr)      # Passing roomId to message function here to Post Message.

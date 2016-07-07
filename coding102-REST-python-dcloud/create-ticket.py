@@ -5,13 +5,12 @@ import requests
 import json
 
 # put the ip address or dns of your apic-em controller in this url
-#url = 'https://sandboxapic.cisco.com/api/v1/ticket'
-url='https://devnetapi.cisco.com/sandbox/apic_em/api/v1/ticket'
+url = 'https://198.18.129.100/api/v1/ticket'
 
 
 
 #the username and password to access the APIC-EM Controller
-payload = {"username":"devnetuser","password":"Cisco123!"}
+payload = {"username":"admin","password":"C1sco12345"}
 
 
 #Content type must be included in the header

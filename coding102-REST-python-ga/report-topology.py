@@ -39,8 +39,8 @@ def getTicket():
 	url = "https://" + controller + "/api/v1/ticket"
 
 	#the username and password to access the APIC-EM Controller
-	#payload = {"username":"devnetuser","password":"Cisco123!"}
-	payload = {"username":"admin","password":"Grapevine1"}
+	payload = {"username":"devnetuser","password":"Cisco123!"}
+	
 
 	#Content type must be included in the header
 	header = {"content-type": "application/json"}
