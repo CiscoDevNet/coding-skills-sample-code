@@ -1,7 +1,7 @@
 from urllib.request import Request, urlopen
 import json
 
-req = Request('http://jsonplaceholder.typicode.com/users')
+req = Request('http://jsonplaceholder.typicode.com/users', headers={'User-Agent': 'Mozilla/5.0'})
 response = urlopen(req)
 response_string = response.read().decode("utf-8")
 
