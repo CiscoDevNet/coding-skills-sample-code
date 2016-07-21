@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>APIC-EM Topology</title>
+    <!--link NeXT UI Toolkit-->
+    <link rel="stylesheet" href="http://abdvl.github.io/src/dist/css/next.css">
+    <script type="text/javascript" src="http://abdvl.github.io/src/dist/js/next.js"></script>
+    <!--link jQuery for Ajax call-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+    //initialize a topology component
+    topo = new nx.graphic.Topology({
+        width: 800, // set canvase width and height
+        height: 800,
+        showIcon: true, // show icon
+        nodeConfig: {
+            label: 'model.label' // set which label to show, can change to IP or deviceType or any other attribue you wan to show
+        },
+        identityKey: 'id', // for mapping node and link
+        layoutType: 'enterpriseNetworkLayout', // apply Enterprise Network Layout, can change to 'force'
+        layoutConfig: {
+            sortOrder: ['cloud node', 'BORDER ROUTER', 'CORE', 'DISTRIBUTION', 'ACCESS', 'HOST'],
+            levelBy: "model.role"
+        }
+    });
+
+    //when topology component ready, make a ajax call to get topology adata and set data to topo component
+    topo.on('ready', function () {
+        $.get("/api/topology", function (data) {
+            topo.data(data)
+        })
+    });
+
+    //create app
+    var app = new nx.ui.Application();
+    //attach topo to app;
+    topo.attach(app);
+
+</script>
+
+
+</body>
+
+</html>
