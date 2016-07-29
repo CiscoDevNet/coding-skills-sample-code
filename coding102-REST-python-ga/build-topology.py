@@ -88,8 +88,7 @@ def getTopology(ticket):
 		found=0    #print header flag
 		printed=0  #formatting flag
 		for i in r_json["response"]["links"]:
-			#if "startPortName" in i:
-				#check that the source device id for the interface matches the node id.  Means interface originated from this device. 
+			#check that the source device id for the interface matches the node id.  Means interface originated from this device. 
 			if i["source"] == n["id"]:
 				if found==0:
 					print('{:>20}'.format("Source Interface") + '{:>15}'.format("Target") +'{:>28}'.format("Target Interface") + '{:>15}'.format("Status") )
@@ -105,7 +104,6 @@ def getTopology(ticket):
 						break;
 		found=0				
 		for i in r_json["response"]["links"]:
-			#if "startPortName" in i:
 			#Find interfaces that link to this one which means this node is the target. 
 			if i["target"] == n["id"]:
 				if found==0:

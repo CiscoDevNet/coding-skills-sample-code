@@ -18,7 +18,7 @@
     topo = new nx.graphic.Topology({
         width: 800, // set canvase width and height
         height: 800,
-        showIcon: true, // show icon
+        showIcon: false, // show icon
         nodeConfig: {
             label: 'model.label' // set which label to show, can change to IP or deviceType or any other attribue you wan to show
         },
@@ -30,7 +30,7 @@
         }
     });
 
-    //when topology component ready, make a ajax call to get topology adata and set data to topo component
+    //when topology component ready, make a ajax call to get the topology data and send the data to the topo component
     topo.on('ready', function () {
         $.get("/api/topology", function (data) {
             topo.data(data)
