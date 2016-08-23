@@ -1,18 +1,19 @@
 from urllib.request import Request, urlopen
 import json
 
-req = Request('https://msesandbox.cisco.com/api/contextaware/v1/maps/info/DevNetCampus')
-req.add_header('Authorization', 'Basic bGVhcm5pbmc6bGVhcm5pbmc==')
-req.add_header('Accept', 'application/json')
+req = Request('https://devnetapi.cisco.com/sandbox/mse/api/config/v1/maps')
+req.add_header('Authorization', 'Basic bGVhcm5pbmc6bGVhcm5pbmc=')
 response = urlopen(req)
-response_string = response.read().decode("utf-8")
+response_string = response.read().decode('utf-8')
 
 json_object = json.loads(response_string)
 
-print(json_object["Campus"]["Building"])
+print(json_object['campuses'])
 
-#buildings = json_object["Campus"]["Building"]
-#for building in buildings:
-#	print(building["name"])
+# campuses = json_object['campuses']
+# for campus in campuses:
+#     print(campus['name'])
+#     # for building in campus['buildingList']:
+#     #     print('\t' + building['name'])
 
 response.close()
