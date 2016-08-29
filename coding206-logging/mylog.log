@@ -1,3 +1,3 @@
-01/16/2015 03:53:21 PM DEBUG: This is a debug message.  We should see this in the file.
-01/16/2015 03:53:21 PM INFO: This is an info message.  We should see this in the file.
-01/16/2015 03:53:21 PM WARNING: This is a warning message.  We should see this in the file.
+08/29/2016 05:53:15 PM DEBUG: This is a debug message.  We should see this in the file.
+08/29/2016 05:53:15 PM INFO: This is an info message.  We should see this in the file.
+08/29/2016 05:53:15 PM WARNING: This is a warning message.  We should see this in the file.

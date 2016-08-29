@@ -1,4 +1,4 @@
-# Formatting the messages in the logging output
+# Simple example of how to log to a file
 
 # amwhaley@cisco.com
 # twitter: @mandywhaley
@@ -25,13 +25,12 @@
 # * PROFITS, OR LOST DATA, OR ANY OTHER INDIRECT DAMAGES EVEN IF CISCO OR ITS
 # * SUPPLIERS HAVE BEEN INFORMED OF THE POSSIBILITY THEREOF.-->
 
-#import the logging module
+# import logging module
 import logging
 
-# specify to log to a file, specify the format for the message and the date format and the logging level
-logging.basicConfig(filename='mylog.log',format='%(asctime)s %(levelname)s: %(message)s',datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
+# specify that we want to log to a file named mylog.log and that we want to track messages at the DEBUG level
+logging.basicConfig(filename='mylog.log',level=logging.DEBUG)
 
-# log some messages
 logging.debug('This is a debug message.  We should see this in the file.')
 logging.info('This is an info message.  We should see this in the file.')
 logging.warning('This is a warning message.  We should see this in the file.')

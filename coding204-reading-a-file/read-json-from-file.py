@@ -33,12 +33,10 @@ import json
 with open('my-json.json') as file:
     # read the whole file
     data = json.loads(file.read())
-
+    
 # access values from the json and loop through devices and display the network device id
 i = 0
 for item in data["response"]:
     print ("Network Device ID: " + data["response"][i]["networkDeviceId"])
     i += 1
-
-file.close()
 
