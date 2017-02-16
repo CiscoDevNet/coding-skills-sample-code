@@ -1,0 +1,35 @@
+{
+  "order": {
+    "placed" : "2017-01-01T00:00:00+00:00",
+    "priority" : 1,
+    "user": {
+      "id": 1,
+      "first_name": "Mike",
+      "last_name": "Maas"
+    },
+    "product": {
+      "sku": "TS007-XL-001",
+      "location": {
+        "container" : 9,
+        "shelf" : 4,
+        "slot" : 6,
+        "coordinates": [
+          {
+            "x": 11
+          },
+          {
+            "y": 44
+          },
+          {
+            "z": -4
+          }
+        ]
+      },
+      "price": 9.99,
+      "tags": [
+        "t-shirt",
+        "blue"
+      ]
+    }
+  }
+}
