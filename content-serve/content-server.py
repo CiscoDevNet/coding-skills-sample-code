@@ -8,7 +8,6 @@ server_port = 8000
 
 
 class CustomRequestHandler(http.server.BaseHTTPRequestHandler):
-
     def do_GET(self):
 
         route_path = self.path.rstrip("/")
@@ -32,12 +31,12 @@ class CustomRequestHandler(http.server.BaseHTTPRequestHandler):
         elif route_path == '/complex/array':
             self.send_response(200)
             self.write_complex_array()
-        else :
+        else:
             # Otherwise send a default response
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-            self.wfile.write(bytes("Content Server", "utf8"))  # Write content as utf-8 data
+            self.wfile.write(open("./data/index.html", "rb").read())
 
         return
 
