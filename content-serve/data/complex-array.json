@@ -1,0 +1,107 @@
+[
+  {
+    "order": {
+      "placed": "2017-01-01T00:00:00+00:00",
+      "priority" : 1,
+      "user": {
+        "id": 1,
+        "first_name": "Mike",
+        "last_name": "Maas"
+      },
+      "product": {
+        "sku": "TS007-XL-001",
+        "location": {
+          "container" : 9,
+          "shelf": 4,
+          "slot" : 6,
+          "coordinates": [
+            {
+              "x": 11
+            },
+            {
+              "y": 44
+            },
+            {
+              "z": -4
+            }
+          ]
+        },
+        "price": 9.99,
+        "tags": [
+          "t-shirt",
+          "black"
+        ]
+      }
+    }
+  },
+  {
+    "order": {
+      "placed": "2016-01-01T00:00:00+00:00",
+      "priority" : 3,
+      "user": {
+        "id": 2,
+        "first_name": "Matt",
+        "last_name": "Denapoli"
+      },
+      "product": {
+        "sku": "TS009-XL-003",
+        "location": {
+          "container" : 9,
+          "shelf": 4,
+          "slot" : 5,
+          "coordinates": [
+            {
+              "x": 11
+            },
+            {
+              "y": 44
+            },
+            {
+              "z": -4
+            }
+          ]
+        },
+        "price": 8.99,
+        "tags": [
+          "t-shirt",
+          "blue"
+        ]
+      }
+    }
+  },
+  {
+    "order": {
+      "placed": "2015-01-01T00:00:00+00:00",
+      "priority" : 2,
+      "user": {
+        "id": 3,
+        "first_name": "Ashley",
+        "last_name": "Roach"
+      },
+      "product": {
+        "sku": "TS003-L-001",
+        "location": {
+          "container" : 8,
+          "shelf": 5,
+          "slot" : 2,
+          "coordinates": [
+            {
+              "x": 9
+            },
+            {
+              "y": 34
+            },
+            {
+              "z": -5
+            }
+          ]
+        },
+        "price": 12.99,
+        "tags": [
+          "t-shirt",
+          "salmon"
+        ]
+      }
+    }
+  }
+]
