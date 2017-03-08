@@ -2,6 +2,13 @@ from urllib.request import Request, urlopen
 import json
 
 req = Request('http://jsonplaceholder.typicode.com/users', headers={'User-Agent': 'Mozilla/5.0'})
+# req = Request('http://127.0.0.1:8000/object')
+# req = Request('http://127.0.0.1:8000/array')
+# req = Request('http://127.0.0.1:8000/random')
+# req = Request('http://127.0.0.1:8000/random/array')
+# req = Request('http://127.0.0.1:8000/complex')
+# req = Request('http://127.0.0.1:8000/complex/array')
+
 response = urlopen(req)
 response_string = response.read().decode("utf-8")
 
