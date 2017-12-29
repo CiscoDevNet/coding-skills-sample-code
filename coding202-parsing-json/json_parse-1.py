@@ -1,6 +1,6 @@
 food={"vegetables":["carrots","kale","cucumber","tomato"]}
 
-cars={"sports":{"Porsche":"Volkswagon","Viper":"Dodge","Corvette":"Chevy"}}
+cars={"sports":{"Porsche":"Volkswagen","Viper":"Dodge","Corvette":"Chevy"}}
 
 
 
