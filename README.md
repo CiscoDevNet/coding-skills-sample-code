@@ -1,5 +1,19 @@
-# coding-skills-sample-code
-Sample code for the Cisco DevNet Coding Skills Learning Labs
+## Cisco DevNet Learning Labs Sample Code for Coding Skills
 
-You can find step-by-step tutorials that walk through this sample code on [Cisco DevNet](http://learninglabs.cisco.com).
+These code examples provide Python scripts to perform network automation tasks such as creating a ticket or getting a list of network hosts or devices. 
+
+The step-by-step tutorials that work with this code are Learning Labs, displayed within the [Cisco DevNet Learning Labs system](https://learninglabs.cisco.com).
+
+Contributions are welcome, and we are glad to review changes through pull requests. See [contributing.md](contributing.md) for details.
+
+The goal of these learning labs is to ensure a 'hands-on' learning approach rather than just theory or instructions.
+
+## Contributing
+
+These samples are for public consumption, so you must ensure that you have the rights to any code that you contribute.
+
+## Getting Involved
+
+* If you'd like to contribute examples for an existing lab, refer to [contributing.md](contributing.md).
+* If you're interested in creating a new Cisco DevNet Learning Lab or code example, please contact a DevNet administrator for guidance.
 
