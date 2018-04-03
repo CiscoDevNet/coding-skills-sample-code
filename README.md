@@ -1,6 +1,6 @@
 ## Cisco DevNet Learning Labs Sample Code for Coding Skills
 
-These code examples provide Python scripts to perform network automation tasks such as creating a ticket or getting a list of network hosts or devices. 
+These code examples provide Python scripts to perform coding tasks.
 
 The step-by-step tutorials that work with this code are Learning Labs, displayed within the [Cisco DevNet Learning Labs system](https://learninglabs.cisco.com).
 
