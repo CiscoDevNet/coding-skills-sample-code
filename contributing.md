@@ -20,6 +20,7 @@ For DevNet Express events, use these three Issue tracker repos based on the cont
 * https://github.com/CiscoDevNet/devnet-express-dna-issues
 * https://github.com/CiscoDevNet/devnet-express-cc-issues
 * https://github.com/CiscoDevNet/devnet-express-dci-issues
+* https://github.com/CiscoDevNet/devnet-express-security-issues
 
 Use the issue tracker to suggest additions, report bugs, and ask questions.
 This is also a great way to connect with the developers of the project as well
@@ -31,8 +32,7 @@ that effort, then follow the _Changing the Learning Lab content_ guidance below.
 
 ## Changing the Learning Lab content
 
-Generally speaking, you should fork the Learning Lab repository, make changes in
-your fork, and then submit a pull request (PR). All new content should be tested
+Generally speaking, you should clone the Learning Lab repository, make changes locally, and then submit a pull request (PR). All new content should be tested
 to validate that documented tasks work correctly. Additionally, the content
 should follow the [Learning Lab Style Guide](https://github.com/CiscoDevNet/devnet-writing-guidelines/wiki/Lab-Style-Guide).
 
