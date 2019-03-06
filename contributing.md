@@ -16,7 +16,7 @@ For public repo Learning Labs, use the issue tracker in the repo. All Learning L
 
 For private Learning Labs, use the common Issue tracker in the [CiscoDevNet/learning-labs-issues](https://github.com/CiscoDevNet/learning-labs-issues) repo.
 
-For DevNet Express events, use these three Issue tracker repos based on the content track:
+For DevNet Express events, use these Issue tracker repos based on the content track:
 * https://github.com/CiscoDevNet/devnet-express-dna-issues
 * https://github.com/CiscoDevNet/devnet-express-cc-issues
 * https://github.com/CiscoDevNet/devnet-express-dci-issues
