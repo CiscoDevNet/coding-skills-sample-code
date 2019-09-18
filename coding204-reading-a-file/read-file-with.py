@@ -2,7 +2,7 @@
 # amwhaley@cisco.com
 # twitter: @mandywhaley
 # http://developer.cisco.com
-# http://learninglabs.cisco.com
+# http://developer.cisco.com/learning
 # Jan 15, 2015
 
 # * THIS SAMPLE APPLICATION AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY

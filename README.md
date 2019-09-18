@@ -2,7 +2,7 @@
 
 These code examples provide Python scripts to perform coding tasks.
 
-The step-by-step tutorials that work with this code are Learning Labs, displayed within the [Cisco DevNet Learning Labs system](https://learninglabs.cisco.com).
+The step-by-step tutorials that work with this code are Learning Labs, displayed within the [Cisco DevNet Learning Labs system](https://developer.cisco.com/learning).
 
 Contributions are welcome, and we are glad to review changes through pull requests. See [contributing.md](contributing.md) for details.
 
